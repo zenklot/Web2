@@ -1,0 +1,85 @@
+<?php
+// Inisialisasi 
+$id = $_POST['id'];
+$nama = trim($_POST['nama']);
+$jk = $_POST['jk'];
+$tgl = $_POST['tgl'];
+$agama = $_POST['agama'];
+$sekolah = $_POST['sekolah'];
+$alamat = $_POST['alamat'];
+$gambar = "def-L.png";
+
+// Inisialisasi Foto
+$namaFoto = $_FILES['foto']['name'];
+$ukuranFoto = $_FILES['foto']['size'];
+$error = $_FILES['foto']['error'];
+$tmpName = $_FILES['foto']['tmp_name'];
+
+$ektensiBoleh = ['jpg','jpeg','png'];
+$pecahNamaFoto = explode('.',$namaFoto);
+$ektensiGambar = strtolower(end($pecahNamaFoto));
+
+
+
+// Pengecekan setiap inputan
+// cek nama bukan numerik
+if(is_numeric($nama)){
+    die("<script>alert('Nama diisi dengan Huruf!')</script><a href='tgs1-formDaftar.php'>Kembali</a>");
+    // header('Location: tgs1-formDaftar.php ');
+}
+
+// cek jenis kelamin tidak di isi
+if($jk == "-"){
+    die("<script>alert('Jenis Kelamin Tidak DIisi!')</script><a href='tgs1-formDaftar.php'>Kembali</a>");
+}
+
+// cek tgl lahir
+if(empty($tgl)){
+    die("<script>alert('Tgl Lahir Tidak DIisi!')</script><a href='tgs1-formDaftar.php'>Kembali</a>");
+}
+
+// cek agama
+if($agama == "-"){
+    die("<script>alert('Pilih salah satu agama!')</script><a href='tgs1-formDaftar.php'>Kembali</a>");
+}
+
+// cek pendidikan terakhir
+if($sekolah == "-"){
+    die("<script>alert('Pilih pendidikan terakhir anda!')</script><a href='tgs1-formDaftar.php'>Kembali</a>");
+}
+
+// cek alamat
+$p_alamat = str_replace(' ','',trim($alamat));
+$p_alamat = strlen($p_alamat);
+if($p_alamat<=20){
+    die("<script>alert('Isikan alamat yang benar!')</script><a href='tgs1-formDaftar.php'>Kembali</a>");
+}
+
+// cek upload gambar/tidak
+if ($error === 4){
+    // echo "<script>alert('Pilih gambar terlebih dahulu!')</script>";
+    if ($jk == "L"){
+        $gambar = "def-L.png";
+    } elseif ($jk == "P") {
+        $gambar = "def-P.png";
+    }
+} elseif ($error === 0) {
+    $gambar = "gambar.jpg";
+    // cek yang di upload gambar
+    if(!in_array($ektensiGambar,$ektensiBoleh)){
+            die("<script>alert('Yang Di Upload Bukan Gambar')</script>");
+    }
+}
+
+// cek ukuran foto
+if($ukuranFoto > 1000000){
+    die("<script>alert('Ukuran File Gambar lebih dari 1mb!')</script>");
+}
+
+
+// $namaFileBaru = uniqid();
+$namaFileBaru = "gambar.jpg";
+// $namaFileBaru .= $ektensiGambar;
+
+move_uploaded_file($tmpName,'img/'.$namaFileBaru);
+?>

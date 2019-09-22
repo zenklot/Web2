@@ -1,0 +1,292 @@
+.wrap {
+    width: 100%;
+    margin: auto;
+}
+
+.header {
+    height: auto;
+    float: left;
+    width: 100%;
+    background-color: #456ad3;
+}
+
+.logo {
+    width: 40%;
+    float: left;
+}
+
+.judul {
+    float: left;
+    text-align: center;
+    color: white;
+    width: 60%;
+    height: 100%;
+
+}
+
+.kosong {
+    clear: both;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: #ddd;
+}
+
+table {
+    width: 100%;
+}
+
+.kartu {
+    width: 500px;
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 5%;
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(circle, rgba(71, 98, 219, 0.479), #618afa);
+    float: left;
+    margin: 10px;
+}
+
+.kartuHeader {
+    border: 4px solid rgb(63, 17, 82);
+    border-radius: 75%;
+    width: 900px;
+    height: 380px;
+    position: absolute;
+    top: -280px;
+    left: -150px;
+    transform: rotate(3deg);
+    background-color: #456ad3;
+
+}
+
+.kartuHedJudul {
+    color: #fff;
+    width: 300px;
+    top: 5px;
+    left: -15px;
+    position: absolute;
+    text-align: right;
+    border-right: 2px solid rgb(57, 56, 143);
+    padding-right: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.kartuHedLogo {
+    width: 180px;
+    height: auto;
+    position: absolute;
+    top: 18px;
+    right: 10px;
+}
+
+.kartuFooter {
+    border: 1px solid black;
+    border-radius: 75%;
+    width: 400px;
+    height: 110px;
+    position: absolute;
+    top: 250px;
+    left: -180px;
+    transform: rotate(7deg);
+    background-color: #453ad3;
+}
+
+.kartuTgl {
+
+    width: 125px;
+    position: absolute;
+    bottom: 8px;
+    text-align: right;
+    color: #fff;
+
+}
+
+.pasFoto {
+    width: 100px;
+    height: 120px;
+    border: 1px solid rgba(0, 0, 0, 0.555);
+    overflow: hidden;
+    position: relative;
+    top: 113px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.idid {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 350px;
+    position: absolute;
+    top: 105px;
+    left: 120px;
+    height: auto;
+    color: rgb(255, 241, 38);
+    font-weight: bolder;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.8);
+}
+
+.lblLain {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 350px;
+    position: absolute;
+    left: 120px;
+    top: 124px;
+    height: auto;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.8);
+}
+
+.footerKartuBack {
+    border: 4px solid rgb(63, 17, 82);
+    border-radius: 55%;
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    background-color: #456ad3;
+    bottom: -450px;
+    left: -150px;
+}
+
+.logoKartuBack {
+    width: 180px;
+    height: auto;
+    position: absolute;
+    top: 165px;
+    left: 160px;
+}
+
+.tulisanBack {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 500px;
+    height: auto;
+    position: absolute;
+    top: 20px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.8);
+}
+
+.tulisanBackFoot {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 500px;
+    height: 20px;
+    position: absolute;
+    bottom: 50px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.8);
+    text-decoration: underline;
+}
+
+.tulisanTahun {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 500px;
+    height: 20px;
+    position: absolute;
+    bottom: 15px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.8);
+
+}
+
+.kembali {
+    margin-top: 20px;
+}
+
+a.btnDet {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 12px;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    word-spacing: 0px;
+    display: inline-block;
+    height: 15px;
+    width: 53px;
+    padding: 3px 5px 3px 5px;
+    color: #fff;
+    border-radius: 10px;
+    border: 2px dotted transparent;
+}
+
+
+.primar {
+    background-color: #007BFF;
+
+}
+
+.primar:hover {
+    border: 2px dotted #007BFF;
+    background-color: rgb(4, 77, 155);
+}
+
+.suces {
+    background-color: #008D4C;
+}
+
+.suces:hover {
+    border: 2px dotted #008D4C;
+    background-color: rgb(0, 100, 54);
+}
+
+.dgr {
+    background-color: #D73925;
+}
+
+.dgr:hover {
+    border: 2px dotted #D73925;
+    background-color: rgb(185, 24, 3);
+}
+
+a.btnBack {
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    background-color: blue;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10%;
+    transition: all 0.5s;
+
+
+}
+
+a.btnBack:hover {
+    background-color: #ddd;
+    border: 1px dotted blue;
+    color: black;
+    border-radius: 10%;
+}
+
+.kosong2 {
+    margin: 20px;
+}
+
+.pesanErr {
+    width: auto;
+    height: auto;
+    background-color: rgba(255, 91, 91, 0.562);
+    padding: 10px;
+    color: rgb(175, 0, 0);
+
+}
+
+.err {
+    font-size: 2em;
+}
+
+p.member {
+    color: gold;
+    font-style: italic;
+    font-weight: bold;
+    margin-top: -5px;
+}
