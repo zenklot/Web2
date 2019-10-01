@@ -1,0 +1,6 @@
+1. Buat Fungsi terbilang
+	contoh = 120:seratus duapuluh ribu rupiah
+2. Buat Fungsi format curency
+	contoh = 1200: Rp. 1.200
+3. Buat fungsi Format tanggal indo
+	contoh = 2019/10/01 : Selasa, 01 Oktober 2019
